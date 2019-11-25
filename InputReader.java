@@ -1,3 +1,4 @@
+
 import java.util.HashSet;
 import java.util.Scanner;
 
@@ -31,9 +32,12 @@ public class InputReader
     public HashSet<String> getInput() 
     {
         System.out.print("> ");                // print prompt
-        String inputLine = reader.nextLine().trim().toLowerCase();
-
-        String[] wordArray = inputLine.split(" ");  // split at spaces
+        String inputLine = "";
+        if(!reader.nextLine().isEmpty())
+        {
+            inputLine = reader.nextLine().trim().toLowerCase();
+        }
+        String[] wordArray = inputLine.split("");  // split at spaces
 
         // add words from array into hashset 
         HashSet<String> words = new HashSet<>();
