@@ -33,11 +33,10 @@ public class InputReader
     {
         System.out.print("> ");                // print prompt
         String inputLine = "";
-        if(!reader.nextLine().isEmpty())
-        {
-            inputLine = reader.nextLine().trim().toLowerCase();
-        }
-        String[] wordArray = inputLine.split("");  // split at spaces
+
+        inputLine = reader.nextLine().trim().toLowerCase();
+        
+        String[] wordArray = inputLine.split(" ");  // split at spaces
 
         // add words from array into hashset 
         HashSet<String> words = new HashSet<>();
